@@ -2,7 +2,7 @@ import axios from "axios";
 import { triggerLogout } from "../features/auth/AuthContext";
 
 export const authAxios = axios.create({
-  baseURL: "https://kavios-pix-backend-iota.vercel.app",
+  baseURL: import.meta.env.VITE_API_URL,
   withCredentials: true,
 });
 

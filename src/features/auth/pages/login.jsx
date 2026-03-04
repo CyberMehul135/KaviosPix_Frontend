@@ -24,7 +24,7 @@ export default function Login() {
   const authenticateViaOAuth = () => {
     setLoading(true);
 
-    window.location.href = `https://kavios-pix-backend-iota.vercel.app/api/v1/auth/google?redirect=${redirect}`;
+    window.location.href = `${import.meta.env.VITE_API_URL}/api/v1/auth/google?redirect=${redirect}`;
 
     setTimeout(() => {
       setLoading(false);
