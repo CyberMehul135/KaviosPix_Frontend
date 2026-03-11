@@ -8,6 +8,11 @@ export const getAlbumImages = async (albumId, tags) => {
   return res.data;
 };
 
+export const getAlbumImagesTags = async (albumId) => {
+  const res = await authAxios.get(`/api/v1/albums/${albumId}/images/tags`);
+  return res.data;
+};
+
 export const likeAlbumImage = async (albumId, imageId) => {
   const res = await authAxios.put(
     `/api/v1/albums/${albumId}/images/${imageId}/favourite`,

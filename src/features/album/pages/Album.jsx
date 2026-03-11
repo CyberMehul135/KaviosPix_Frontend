@@ -30,7 +30,7 @@ export default function Album() {
         onBtnClick={() => dispatch(setCreateImageFormOpen(albumId))}
       />
 
-      <TagSelector data={data} />
+      <TagSelector />
 
       <ImageList
         data={data}
