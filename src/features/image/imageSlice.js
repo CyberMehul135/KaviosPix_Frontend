@@ -4,6 +4,7 @@ const initialState = {
   isCreateImageFormOpen: false,
   albumId: "",
   isImageLayoutGrid: false,
+  selectedTags: [],
 };
 
 export const imageSlice = createSlice({
@@ -17,9 +18,13 @@ export const imageSlice = createSlice({
     setImageLayout: (state, action) => {
       state.isImageLayoutGrid = action.payload.isGrid;
     },
+    setSelectedTags: (state, action) => {
+      state.selectedTags = action.payload;
+    },
   },
 });
 
-export const { setCreateImageFormOpen, setImageLayout } = imageSlice.actions;
+export const { setCreateImageFormOpen, setImageLayout, setSelectedTags } =
+  imageSlice.actions;
 
 export default imageSlice.reducer;

@@ -17,6 +17,7 @@ export default function Albums() {
   });
 
   const dispatch = useDispatch();
+  console.log(import.meta.env.VITE_API_URL);
 
   return (
     <>

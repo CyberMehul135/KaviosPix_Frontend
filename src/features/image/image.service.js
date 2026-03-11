@@ -1,8 +1,10 @@
 import { authAxios } from "../../services/axios";
 
 // album specific
-export const getAlbumImages = async (albumId) => {
-  const res = await authAxios.get(`/api/v1/albums/${albumId}/images`);
+export const getAlbumImages = async (albumId, tags) => {
+  const res = await authAxios.get(`/api/v1/albums/${albumId}/images`, {
+    params: { tags },
+  });
   return res.data;
 };
 

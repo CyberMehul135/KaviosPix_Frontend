@@ -42,7 +42,7 @@ export function AccountOptions() {
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
         <Avatar>
-          <AvatarImage src={data?.user.avtar} alt="User Image" />
+          <AvatarImage src={data?.user?.avtar} alt="User Image" />
           <AvatarFallback>CN</AvatarFallback>
           <AvatarBadge className="bg-green-600 dark:bg-green-800" />
         </Avatar>
